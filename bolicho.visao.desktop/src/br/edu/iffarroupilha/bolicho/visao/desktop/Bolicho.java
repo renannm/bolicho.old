@@ -32,22 +32,13 @@ public class Bolicho extends JFrame {
 							// "zuada no vizu")
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		desenhaComponentes(); // **Atalho** Clicka em cima -> Ctrl + 1 + Enter
-		// Colocando TEMA na aplicação
-		try {
-			UIManager.setLookAndFeel(new NimbusLookAndFeel());
-		} catch (UnsupportedLookAndFeelException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
+		desenhaComponentes(); // **Atalho** Clicka em cima -> Ctrl + 1 + Enter	
 		setVisible(true); // última coisa a se fazer é o SetVisible, pois o que
 							// esta depois dela não aparece na tela (a menos que
 							// tu "force")
 	}
 
-	private void desenhaComponentes() {
+	private void desenhaComponentes() { //Criamos os itens do menu!
 		// cria a barra de menus
 		JMenuBar menu = new JMenuBar();
 		// cria o menu cadastros
@@ -67,8 +58,7 @@ public class Bolicho extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				JOptionPane.showMessageDialog(Bolicho.this, "Você clickou! WOW! *__* "); //O Bolicho.this ANCORA a pop-up com a janela "MÃE" e não com o monitor!
-				
+				new FrmCliente(Bolicho.this); //instanciando a classe Cliente na classe principal
 			}
 		});
 		// Ação ao clickar em Produto
