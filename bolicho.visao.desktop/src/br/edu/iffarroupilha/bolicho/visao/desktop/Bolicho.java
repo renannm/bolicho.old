@@ -66,7 +66,7 @@ public class Bolicho extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showInputDialog(Bolicho.this,"Conte-me sobre o seu dia ^_^) :");
+				new FrmProduto(Bolicho.this);
 				
 			}
 		});
