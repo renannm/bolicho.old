@@ -1,10 +1,18 @@
 package br.edu.iffarroupilha.bolicho.modelo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Cliente {
-	
+	@Id //chave primária
+	@Column(nullable=false) //not null
 	private int cpf;
-	private String nome;
 	
+	@Column(length=40,nullable=false) //tamanho + notnull
+	private String nome;
+
 	//Getters and Setters
 	
 	public int getCpf() {
