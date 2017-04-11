@@ -1,9 +1,21 @@
 package br.edu.iffarroupilha.bolicho.modelo;
 
-public class Produto {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
+public class Produto {
+		@Id @GeneratedValue(strategy = GenerationType.IDENTITY) //chave primária
+		@Column(nullable=false) //not null
 		private int idProduto;
+		
+		@Column(length=40,nullable=false) //tamanho + notnull
 		private String descricao;
+		
+		@Column(length=40,nullable=false) //tamanho + notnull
 		private double preco;
 		
 		//Getters and Setters
